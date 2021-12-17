@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	
+
+	<style type="text/css">
+		input {
+			width: 150px;
+			margin: 10px;
+		}
+		select {
+			height: 22px;
+			width: 160px;
+			margin: 10px;
+		}
+		button {
+			margin: 10px;
+			width: 160px;
+		}
+	</style>
+
+</head>
+<body>
+
+	
+		<input  class="numberOne" type="number"><label> ← <u>Введіть</u> перше число</label><br>
+		<input class="numberTwo" type="number" ><label> ← <u>Введіть</u> друге число</label><br>
+
+			<select class="operation">
+				<option selected disabled> </option>
+				<option value="plus">+</option>
+			    <option value="minus">-</option>
+			    <option value="multiplication">*</option>
+			    <option value="division">/</option>
+			</select><label> ← <u>Оберіть</u> арифметичну операцію</label><br>
+
+		<button onclick="button()" class="button">Обчислити</button><label> ← <u>Натисніть</u> щоб виконати операцію</label><br>
+
+		
+	
+	
+
+
+	<script type="text/javascript">
+
+		
+
+		
+		function button(){
+
+			let one = document.querySelector('.numberOne').value;
+			let two = document.querySelector('.numberTwo').value;
+			let oper = document.querySelector('.operation').value;
+
+
+
+			if(oper == 'plus'){
+				let rezult = Math.round(parseInt(one) + parseInt(two));
+				alert(rezult);
+
+				}
+
+
+			if(oper == 'minus'){
+				let rezult = Math.round(parseInt(one) - parseInt(two));
+				alert(rezult);
+				}
+
+			if(oper == 'multiplication'){
+				let rezult = Math.round(parseInt(one) * parseInt(two));
+				alert(rezult);
+				}
+
+			if(oper == 'division'){
+				let rezult = Math.round(parseInt(one) / parseInt(two));
+				alert(rezult);
+				}
+
+			
+
+		};
+
+
+	</script >
+
+
+</body>
+</html>
